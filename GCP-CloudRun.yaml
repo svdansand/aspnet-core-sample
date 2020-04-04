@@ -5,7 +5,7 @@ steps:
 # Push the image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/dansand/github.com/svdansand/aspnet-core:$COMMIT_SHA']
-# Deploy image to Cloud Run
+# Deploy image to Cloud Run - the name section here is CLOUD Builders who do the construction of the images or deployment
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - 'run'
