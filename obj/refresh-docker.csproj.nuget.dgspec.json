@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dan/GitHub/refresh-docker/refresh-docker.csproj": {}
+  },
+  "projects": {
+    "/Users/dan/GitHub/refresh-docker/refresh-docker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dan/GitHub/refresh-docker/refresh-docker.csproj",
+        "projectName": "refresh-docker",
+        "projectPath": "/Users/dan/GitHub/refresh-docker/refresh-docker.csproj",
+        "packagesPath": "/Users/dan/.nuget/packages/",
+        "outputPath": "/Users/dan/GitHub/refresh-docker/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+    {
+        "name": ".NET Core Launch (web)",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/aspnet-core.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+            "action": "openExternally",
+            "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "sourceFileMap": {
+            "/Views": "${workspaceFolder}/Views"
+        }
+    },
+    {
+        "name": ".NET Core Attach",
+        "type": "coreclr",
+        "request": "attach",
+        "processId": "${command:pickProcess}"
+    },
+    {
+        "name": "Run on Kubernetes",
+        "type": "cloudcode.kubernetes",
+        "request": "launch",
+        "skaffoldConfig": "${workspaceFolder}/skaffold.yaml",
+        "watch": true,
+        "cleanUp": true,
+        "portForward": true,
+        "imageRegistry": "gcr.io/dansand"
+    },
+    {
+        "name": "Debug on Kubernetes",
+        "type": "cloudcode.kubernetes",
+        "request": "attach",
+        "podSelector": {
+            "app": "dotnet-hello-world"
+        },
+        "localRoot": "${workspaceFolder}/src",
+        "language": "NETCore",
+        "remoteRoot": "/src",
+        "debugPort": 9229
+    }
+]
+}

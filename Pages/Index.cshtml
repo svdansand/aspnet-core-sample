@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Hello DAN 2 - Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<p>Use this area to provide additional information.</p>
+
+<h3>Host Information</h3>
+<b>Hostname:</b> @ViewData["HOSTNAME"]</br>
+<b>Processors:</b> @ViewData["PROCESSORS"]</br>
+<b>OS Architecture:</b> @ViewData["OSARCHITECTURE"]</br>
+<b>OS Description:</b> @ViewData["OSDESCRIPTION"]</br>
+<b>Process Architecture:</b> @ViewData["PROCESSARCHITECTURE"]</br>
+<b>Framework Description:</b> @ViewData["FRAMEWORKDESCRIPTION"]</br>
+<b>Framework Description:</b> @ViewData["CURRENTDATE"]</br>
+<h2></h2>
+<h2></h2>
+<h3>Environmental Variables:</h3>
+@Html.Raw(ViewData["ENV_VARS"])
+
+<p>  Generate exception for Application insights to capture.... </p>
+
+<form asp-controller="home" asp-action="throwException">
+    <button name="btnOne" type="submit" class="btn btn-default">Click Me for a free exception!</button>
+</form>
