@@ -1,0 +1,21 @@
+steps:
+# Build the container image
+- name: 'gcr.io/dansand/github.com/svdansand/aspnet-core'
+  args: ['build', '-t', 'gcr.io/dansand/github.com/svdansand/aspnet-core:$COMMIT_SHA', '.']
+# Push the image to Container Registry
+- name: 'gcr.io/dansand/github.com/svdansand/aspnet-core'
+  args: ['push', 'gcr.io/dansand/github.com/svdansand/aspnet-core:$COMMIT_SHA']
+# Deploy image to Cloud Run
+- name: 'gcr.io/dansand/github.com/svdansand/aspnet-core'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'aspnet-core'
+  - '--image'
+  - 'gcr.io/dansand/github.com/svdansand/aspnet-core:$COMMIT_SHA'
+  - '--region'
+  - 'us-east1'
+  - '--platform'
+  - 'managed'
+images:
+- gcr.io/dansand/github.com/svdansand/aspnet-core
