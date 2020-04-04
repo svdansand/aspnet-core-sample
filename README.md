@@ -1,2 +1,2 @@
-# aspnet-core sample
- Sample ASPNET core app for containers
+# aspnet-core-sample
+ Sample aspnet-core app for containers
